@@ -1,0 +1,191 @@
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Slide In Left Animation */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide In Right Animation */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Scale Up Animation */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Apply Animations to Elements */
+.navbar {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+    animation: slideUp 1s ease-out;
+}
+
+.hero-content p {
+    animation: slideUp 1s ease-out 0.3s backwards;
+}
+
+.hero-content .cta-button {
+    animation: slideUp 1s ease-out 0.6s backwards;
+}
+
+.about-content {
+    animation: fadeIn 1s ease-out;
+}
+
+.about-image {
+    animation: slideInLeft 1s ease-out;
+}
+
+.about-text {
+    animation: slideInRight 1s ease-out;
+}
+
+.about-stats {
+    animation: scaleUp 1s ease-out;
+}
+
+.destination-card {
+    animation: scaleUp 0.8s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card {
+    animation: scaleUp 0.8s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured {
+    animation: pulse 2s infinite;
+}
+
+.contact-form {
+    animation: slideInLeft 1s ease-out;
+}
+
+.contact-info {
+    animation: slideInRight 1s ease-out;
+}
+
+.map-container {
+    animation: scaleUp 1s ease-out;
+}
+
+.footer {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Hover Animations */
+.nav-links a:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    animation: rotate 0.5s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.book-now:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading Animation */
+.loading {
+    animation: rotate 1s linear infinite;
+}
+
+/* Responsive Animations */
+@media (max-width: 768px) {
+    .about-image, .about-text {
+        animation: slideUp 1s ease-out;
+    }
+    
+    .contact-form, .contact-info {
+        animation: slideUp 1s ease-out;
+    }
+} 
